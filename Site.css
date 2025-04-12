@@ -1,10 +1,13 @@
 body{
     margin: 0px;
     padding: 0px;
+    background-image: url(image/background.jpg);
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-size: 4; /* Cela couvre toute la fenêtre */
 }
 
 .entête1{
-    background-color: gray;
+    background-color: burlywood;
     height: 80px;
     margin: 10px;
 
@@ -32,3 +35,79 @@ form{
     padding: 40px;
     text-align: right;
 }
+/* Ajuste la taille du logo */
+.logo {
+    height: 80px; /* Ajuste la hauteur du logo pour qu'il rentre bien dans la navbar */
+    width: auto; /* Conserve les proportions du logo */
+    display: block; /* Évite les marges inattendues autour de l'image */
+}
+.parfum-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.parfum {
+    border: 1px solid #ccc; /* Ajoute une bordure grise autour de chaque produit */
+    padding: 10px; /* Ajoute un espace intérieur entre le contenu et la bordure */
+    text-align: center; /* Centre le texte et l’image à l’intérieur */
+    width: 200px; /* Définit une largeur fixe pour chaque carte de parfum */
+    border-radius: 10px; /* Arrondit les coins pour un effet plus esthétique */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour donner un effet de profondeur */
+    transition: transform 0.3s; /* Ajoute une transition fluide pour l'effet de zoom */
+}
+
+.parfum img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.parfum p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.prix {
+    font-weight: bold;
+    color: red;
+}
+
+.parfum:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #222; /*  Change la couleur de fond en gris foncé pour bien distinguer le footer */
+    color: white; /*  Met le texte en blanc pour un bon contraste */
+    text-align: center; /*  Centre le texte et les liens dans le footer */
+    padding: 15px; /*  Ajoute de l’espace autour du texte pour l’aérer */
+    margin-top: 20px; /*  Ajoute un espace entre le contenu principal et le footer */
+    position: relative; /*  Garde le footer sous le contenu sans être fixé */
+    bottom: 0; /*  Permet de le positionner en bas (utile si on change en position: fixed plus tard) */
+    width: 100%; /*  Occupe toute la largeur de la page */
+}
+
+.social-links a {
+    color: bisque; /*  Change la couleur des liens en beige clair */
+    text-decoration: none; /*  Enlève le soulignement par défaut des liens */
+    margin: 0 10px; /*  Ajoute un petit espace entre chaque lien */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /*  Lorsque la souris passe sur un lien, il se souligne */
+}
+.section-titre {
+    background-color: bisque; /* Couleur de fond */
+    text-align: center; /* Centre le texte horizontalement */
+    padding: 10px 10px; /* Ajoute de l'espace autour du texte */
+    color: white; /* Couleur du texte */
+    font-size: 1rem; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
