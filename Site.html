@@ -8,74 +8,112 @@
 </head>
 <body>
     <div class="entête1">
-        <nav>
-            <ul class="agrandi">
-                <li> <a href=" ">
-                    <video autoplay loop muted playsinline class="logo">
-                    <source src="image/JYLOWS.mp4" type="video/mp4">
-                    Votre navigateur ne supporte pas la vidéo.
-                </video>
-                </a> </li>
-                <li> <a href=" ">AUTHENTIFICATION</a> </li>
-                <li> <a href=" ">PANIER</a> </li>
-            </ul>
-            <form><input type="search" name="Rech" placeholder="Que cherchez-vous?"> </form>
-        </nav>
+        <!-- Logo texte -->
+    <div class="logo-texte">JYLOWS</div>
+    
+        <!-- Barre de recherche -->
+        <div class="search-container">
+            <form>
+                <input type="search" name="Rech" placeholder="Que cherchez-vous ?">
+            </form>
+        </div>
+    
+        <!-- Authentification + Panier -->
+        <div class="auth-panier">
+            <a href="#">👤 Authentification</a>
+            <a href="#">🛒 Panier</a>
+        </div>
     </div>
+
     <div>
         <nav>
             <ul>
                 <li> <a href=" ">Localisation</a> </li>
+                <li> <a href="Site.html">Accueil</a> </li>
                 <li> <a href="parfum.html">Parfum</a> </li>
                 <li> <a href="Maquillage.html">Maquillage</a> </li><!--Ajout des liens pour chq fichier-->
                 <li> <a href="Sac.html">Sac</a> </li>
                 <li> <a href="AppareilElectronique.html">Appareil electronique</a> </li>
-                <li> <a href=" ">Bijou</a> </li>
+                <li> <a href="Bijou.html">Bijou</a> </li>
             </ul>
         </nav>
     </div>
-    <!--Ajout d'un peu de tout les produits du site, attarctive-->
-    <div class="parfum-container">
-        <div class="parfum">
-            <img src="image/OIP.jpeg" alt="Parfum 1">
-            <p>Kim Cardashian</p>
+    <!-- Carrousel des produits -->
+    <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <img src="image/pub.jpeg" alt="Kim Kardashian">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub2.jpeg" alt="Marque">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub3.png" alt="Senteur">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub4.avif" alt="Marque">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub5.avif" alt="Parfum">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub6.webp" alt="Brillance">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub7.jpg" alt="Eclat">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub8.jpg" alt="Parfum">
+          </div>
+          <div class="carousel-item">
+            <img src="image/pub9.webp" alt="Parfum">
+          </div>
         </div>
-        <div class="parfum">
-            <img src="image/page_1.webp" alt="Parfum 1">
-            <p>Marque</p>
+      </div>
+      <div class="brand-names">
+        <span class="dior">DIOR</span>
+        <span class="ysl">Yves Saint Laurent</span>
+        <span class="sauvage">Sauvage</span>
+        <span class="maybelline">Maybelline</span>
+        <span class="pandora">Pandora</span>
+        <span class="loreal">L'Oréal</span>
+        <span class="chanel">Chanel</span>
+        <span class="guerlain">Guerlain</span>
+      </div> <br>
+
+      <div class="hero-square">
+        <img src="image/OIP.jpeg" alt="Kim Kardashian" class="hero-square-img">
+        <div class="hero-square-text">
+          <h2>Élégance et Luxe</h2>
+          <p>Découvrez notre collection exclusive</p>
+          <a href="parfum.html" class="btn-cta">Voir la collection</a>
         </div>
-        <div class="parfum">
-            <img src="image/parfum backgroun.jpeg" alt="Parfum 1">
-            <p>Senteur</p>
+      </div>
+      <div class="brand-gallery">
+        <div class="brand-card">
+          <img src="image/chanel.jpeg" alt="Dior">
         </div>
-        <div class="parfum">
-            <img src="image/produit-beaute-explosant-couleurs-vibrantes-ia-generatrice-poudre_188544-9687.avif" alt="Parfum 1">
-            <p>Marque</p>
+        <div class="brand-card">
+          <img src="image/pub6.webp" alt="Chanel">
         </div>
-        <div class="parfum">
-            <img src="image/RNParfum.jpeg" alt="Parfum 1">
-            <p>Parfum</p>
+        <div class="brand-card">
+          <img src="image/RNParfum.jpeg" alt="Yves Saint Laurent">
         </div>
-        <div class="parfum">
-            <img src="image/img1.jpg" alt="Parfum 1">
-            <p>Brillance</p>
+        <div class="brand-card">
+          <img src="image/pub.jpeg" alt="L'Oréal">
         </div>
-        <div class="parfum">
-            <img src="image/eclaboussure-pinceau-maquillage-cosmetique_981061-6222.jpg" alt="Parfum 1">
-            <p>Eclat</p>
-        </div>
-        <div class="parfum">
-            <img src="image/background2.jpg" alt="Parfum 1">
-            <p>Parfum</p>
-        </div>
-        <div class="parfum">
-            <img src="image/chanel.jpeg" alt="Parfum 1">
-            <p>Parfum</p>
+        <div class="brand-card">
+          <img src="image/fondteint5.webp" alt="Maybelline">
         </div>
         
+      </div>
+      
+      
+      
+      
+      
+      
 
-
-    </div>
     <!-- 🔹 FOOTER -->
     <footer>
         <p>&copy; 2025 - JYLOWS | Tous droits réservés</p>
