@@ -1,0 +1,44 @@
+/*CSS pour le tableau de board admin*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f7f6f6;
+    
+  }
+  
+  h1 {
+    color: #131313;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .btn {
+    padding: 25px; /* Augmente la taille des boutons */
+    width: 200px; /* Largeur plus grande */
+    height: 80px; /* Hauteur plus grande */
+    border-radius: 20px; /* Coins bien arrondis */
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .client { background-color: #987745; } /* Orange */
+  .produit { background-color: #809a81; } /* Vert */
+  .commande { background-color: #e5a9d1; } /* Bleu */
+  
+  .btn:hover {
+    transform: scale(1.1); /* Effet zoom au survol */
+  }
+  
+   /*fin*/

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+    <title>FormulaireConnexion</title>
 </head>
 <body>
 <form action="FormulaireTraitement.php" method="post"> 
@@ -12,7 +12,7 @@
         <h2><b>S'identifier</b></h2>
 
         <label for="login">Login :</label><br>
-        <input type="text" name="login" id="login"><br>
+        <input type="text" name="login" id="login" placeholder="login@gmail.com"><br>
 
         <label for="password">Mot de passe :</label><br>
         <input type="password" name="password" id="password" ><br><br>
