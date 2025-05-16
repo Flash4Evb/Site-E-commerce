@@ -131,14 +131,14 @@ if (isset($_POST['connexion'])) {
 
 //-----------------------GESTION DES PRODUITS----------------------------------------------------
 
-iif (isset($_POST['validerProd'])) {
+if (isset($_POST['validerProd'])) {
     $reference = $_POST['reference'];
     $nom = $_POST['nom'];
     $description = $_POST['description'];
     $prix = $_POST['prix'];
     $prixacquisition = $_POST['prixac'];
     $categorie = $_POST['categorie'];
-    $image = $_POST['image'];
+    $image = $_POST['image']; 
 
     try {
         $stmt = $pdo->prepare("INSERT INTO produit (reference, nom, description, prix, categorie, prixacquisition, image)
@@ -150,9 +150,31 @@ iif (isset($_POST['validerProd'])) {
         $stmt->bindParam(':categorie', $categorie);
         $stmt->bindParam(':prixacquisition', $prixacquisition);
         $stmt->bindParam(':image', $image); // On stocke juste le nom
-
         $stmt->execute();
+
+         // Redirection selon la catégorie
+        switch ($categorie) {
+            case 'sac':
+                header("Location: AfficherSac.php");
+                break;
+            case 'bijou':
+                header("Location: AfficherBijou.php");
+                break;
+            case 'parfum':
+                header("Location: AfficherParfum.php");
+                break;
+            case 'appareil':
+                header("Location: AfficherAppareil.php");
+                break;
+            case 'maquillage':
+                header("Location: Maquillage.php");
+                break;
+            default:
+                header("Location: Accueil.php");
+        }
+        exit();
         echo "Produit ajouté avec succès !";
+        
     } catch (PDOException $e) {
         echo "Erreur SQL : " . $e->getMessage();
     }

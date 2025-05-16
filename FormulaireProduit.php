@@ -10,7 +10,7 @@
 <body>
     <h1 style=" text-align:center; ">Ajouter un produit</h1>
 
-    <form action="TraitementProduit.php" method="POST" enctype="multipart/form-data">
+    <form action="FormulaireTraitement.php" method="POST" enctype="multipart/form-data">
         <div  style="border: 1px solid #ccc; padding: 20px; width: 350px; margin: auto; border-radius: 10px; ">
         <label for="reference">Référence :</label><br>
         <input type="text" name="reference" id="reference" required><br><br>

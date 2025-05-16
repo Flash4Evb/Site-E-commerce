@@ -3,7 +3,7 @@ include 'Connexion.php'; // ta connexion PDO
 
 $produit = []; // initialisation du tableau
 
-if (isset($_POST['afficher_produit'])) {
+if (isset($_POST['afficher_prod'])) {
     try {
         $stmt = $pdo->prepare("SELECT * FROM produit ");
         $stmt->execute();
@@ -49,16 +49,16 @@ if (isset($_POST['afficher_produit'])) {
      <?php if (!empty($produit)) : ?>
       <?php foreach ($produit as $produits) : ?>
         <tr>
-          <td><?= htmlspecialchars($produits['Reference']) ?></td> <!--  -->
-          <td><?= htmlspecialchars($produits['Nom']) ?></td>
-          <td><?= htmlspecialchars($produits['Description']) ?></td>
-          <td><?= htmlspecialchars($produits['Prix']) ?></td>
-           <td><?= htmlspecialchars($produits['Categorie']) ?></td>
-           <td><?= htmlspecialchars($produits['PrixAcquisition']) ?></td>
-           <td><?= htmlspecialchars($produits['Image']) ?></td>
+          <td><?= htmlspecialchars($produits['Reference']) ?></td> <!-- attaque javascript  -->
+          <td><?= htmlspecialchars($produits['nom']) ?></td>
+          <td><?= htmlspecialchars($produits['description']) ?></td>
+          <td><?= htmlspecialchars($produits['prix']) ?></td>
+           <td><?= htmlspecialchars($produits['categorie']) ?></td>
+           <td><?= htmlspecialchars($produits['prixacquisition']) ?></td>
+           <td><?= htmlspecialchars($produits['image']) ?></td>
             <td>
-            <a href="FormulaireProduit.php?id=<?= $produits['id'] ?>" class="btn">✏️ Modifier</a> <!-- 1_URL avec paramètre 2_raccourci -->
-           <a href="Suppresion_Produit.php?id=<?= $produits['id'] ?>" class="btn">🗑️ Supprimer</a>
+            <a href="FormulaireProduit.php?id=<?= $produits['Reference'] ?>" class="btn">✏️ Modifier</a> <!-- 1_URL avec paramètre 2_raccourci -->
+           <a href="Suppresion_Produit.php?id=<?= $produits['Reference'] ?>" class="btn">🗑️ Supprimer</a>
             </td>
         </tr>
       <?php endforeach; ?>

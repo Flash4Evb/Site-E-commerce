@@ -82,9 +82,107 @@ form{
 .auth-panier a:hover {
     color: white;
 }
+/*------------------------------------DEBUT CADRE PRODUIT-------------------------------------------------------*/
+/*cadre produit*/
+  
+.parfum-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
 
+.parfum {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; /* Hauteur fixe pour un alignement cohérent */
+    border: 1px solid #ccc; /* Ajoute une bordure grise autour de chaque produit */
+    padding: 10px; /* Ajoute un espace intérieur entre le contenu et la bordure */
+    text-align: center; /* Centre le texte et l’image à l’intérieur */
+    width: 200px; /* Définit une largeur fixe pour chaque carte de parfum */
+    border-radius: 10px; /* Arrondit les coins pour un effet plus esthétique */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour donner un effet de profondeur */
+    transition: transform 0.3s; /* Ajoute une transition fluide pour l'effet de zoom */
+}
+
+.parfum img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.parfum p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.prix {
+    font-weight: bold;
+    color: red;
+}
+
+.parfum:hover {
+    transform: scale(1.05);
+    
+}
+.btn-panier {
+    margin-top: 100; /* pousse le bouton en bas */
+    padding: 10px 15px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-panier:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.05);
+}
+/*Fin du cadre produit*/
+/*-----------------------------------------FIN M-H ------------------------------------------------*/
+
+/*------------------------------------DEBUT MENU HAMBURGER-------------------------------------------------------*/
+/* Pour le menu hamburger
+Masquer la liste au départ */
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu-categories {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.menu-categories a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin: 8px 0;
+}
+
+.menu-categories a:hover {
+    color: #e74c3c;
+}
+/* Fin du menu hamburger*/
   
-  
+/*-----------------------------------------FIN M-H ------------------------------------------------*/
+
   .brand-names {
     display: flex;
     flex-wrap: wrap; /* Permet de passer à la ligne si trop de marques */
@@ -112,21 +210,6 @@ form{
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
   
-  
-  
-.parfum-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-  
- 
-  
- 
-
   
   .btn-cta {
     display: inline-block;
@@ -170,55 +253,9 @@ form{
     transform: scale(1.05);
   }
   
-  
-  
 
-.parfum {
-    border: 1px solid #ccc; /* Ajoute une bordure grise autour de chaque produit */
-    padding: 10px; /* Ajoute un espace intérieur entre le contenu et la bordure */
-    text-align: center; /* Centre le texte et l’image à l’intérieur */
-    width: 200px; /* Définit une largeur fixe pour chaque carte de parfum */
-    border-radius: 10px; /* Arrondit les coins pour un effet plus esthétique */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère pour donner un effet de profondeur */
-    transition: transform 0.3s; /* Ajoute une transition fluide pour l'effet de zoom */
-}
 
-.parfum img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.parfum p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.prix {
-    font-weight: bold;
-    color: red;
-}
-
-.parfum:hover {
-    transform: scale(1.05);
-}
-
- /*style pour la categorie */
- .menu-container {
-    position: relative;
-    display: inline-block;
-}
-
-.menu-btn {
-    background-color: black;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    display: block;
-    width: 150px;
-    text-align: center;
-}
+ 
 
 
 footer {
