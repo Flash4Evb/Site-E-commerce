@@ -42,3 +42,16 @@ body {
     .button-row td {
       border: none;
     }
+    .action-buttons  {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.action-buttons a:hover {
+    background-color: #0056b3;
+}

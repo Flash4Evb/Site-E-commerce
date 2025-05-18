@@ -132,7 +132,7 @@ if (isset($_POST['connexion'])) {
 //-----------------------GESTION DES PRODUITS----------------------------------------------------
 
 if (isset($_POST['validerProd'])) {
-    $reference = $_POST['reference'];
+   
     $nom = $_POST['nom'];
     $description = $_POST['description'];
     $prix = $_POST['prix'];
@@ -141,9 +141,9 @@ if (isset($_POST['validerProd'])) {
     $image = $_POST['image']; 
 
     try {
-        $stmt = $pdo->prepare("INSERT INTO produit (reference, nom, description, prix, categorie, prixacquisition, image)
-                 VALUES (:reference, :nom, :description, :prix, :categorie, :prixacquisition, :image)");
-        $stmt->bindParam(':reference', $reference);
+        $stmt = $pdo->prepare("INSERT INTO produit ( nom, description, prix, categorie, prixacquisition, image)
+                 VALUES ( :nom, :description, :prix, :categorie, :prixacquisition, :image)");
+       
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':description', $description);
         $stmt->bindParam(':prix', $prix);
@@ -177,6 +177,56 @@ if (isset($_POST['validerProd'])) {
         
     } catch (PDOException $e) {
         echo "Erreur SQL : " . $e->getMessage();
+    }
+}
+/*-----------MODIFICATION-------------*/
+if (isset($_POST['modifierProd'])) {
+    $reference = $_POST['reference'];
+    $nom = $_POST['nom'];
+    $description = $_POST['description'];
+    $prix = $_POST['prix'];
+
+    try {
+        // Récupérer la catégorie du produit pour la redirection
+        $stmt = $pdo->prepare("SELECT categorie FROM produit WHERE Reference = ?");
+        $stmt->execute([$reference]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        $categorie = $result['categorie'];
+
+        // Mise à jour du produit
+        $stmt = $pdo->prepare("UPDATE produit 
+                               SET nom = :nom, description = :description, prix = :prix 
+                               WHERE Reference = :reference");
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':description', $description);
+        $stmt->bindParam(':prix', $prix);
+        $stmt->bindParam(':reference', $reference);
+        $stmt->execute();
+
+        // Redirection selon la catégorie
+        switch ($categorie) {
+            case 'sac':
+                header("Location: AfficherSac.php");
+                break;
+            case 'bijou':
+                header("Location: AfficherBijou.php");
+                break;
+            case 'parfum':
+                header("Location: AfficherParfum.php");
+                break;
+            case 'appareil':
+                header("Location: AfficherAppareil.php");
+                break;
+            case 'maquillage':
+                header("Location: Maquillage.php");
+                break;
+            default:
+                header("Location: Accueil.php");
+        }
+        exit();
+
+    } catch (PDOException $e) {
+        echo "Erreur SQL (modification) : " . $e->getMessage();
     }
 }
 

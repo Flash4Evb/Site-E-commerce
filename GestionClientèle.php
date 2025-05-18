@@ -57,8 +57,12 @@ if (isset($_POST['afficher_clients'])) {
            <td><?= htmlspecialchars($client['adresse']) ?></td>
           <td>
             <a href="FormulaireInscription.php?id=<?= $client['id'] ?>" class="btn">✏️ Modifier</a> <!-- 1_URL avec paramètre 2_raccourci -->
-           <a href="Suppresion_Client.php?id=<?= $client['id'] ?>" class="btn">🗑️ Supprimer</a>
-
+           <a href="SuppressionClient.php?id=<?= $client['id'] ?>" 
+             class="btn" 
+             onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce client ? Cette action est irréversible.');">
+            🗑️ Supprimer
+            </a>
+            
           </td>
         </tr>
       <?php endforeach; ?>
