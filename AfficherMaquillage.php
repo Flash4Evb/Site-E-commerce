@@ -4,7 +4,7 @@ include("Connexion.php");
 
 try {
     // Requête SQL pour récupérer tous les produits de la catégorie "maquillage"
-    $stmt = $pdo->prepare("SELECT * FROM produit WHERE categorie = 'bijou'");
+    $stmt = $pdo->prepare("SELECT * FROM produit WHERE categorie = 'maquillage'");
     $stmt->execute();
     $produits = $stmt->fetchAll();
 } catch (PDOException $e) {
@@ -16,7 +16,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nos Bijoux</title>
+    <title>Nos Maquillages</title>
     <link rel="stylesheet" href="cadreProduit.css">
     <link rel="stylesheet" href="Accueil.css">
     <link rel="stylesheet" href="Site.css">
@@ -28,7 +28,7 @@ try {
         <!-- 🔹 Logo -->
         <div class="logo-texte">JYLOWS</div>
 
-        <!-- 🔹 Menu hamburger (placement spécifique page d'accueil) -->
+        <!-- 🔹 Menu catégories (placement spécifique page d'accueil) -->
        <div style="position: relative;">
     <span class="menu-icon" onclick="toggleMenu()">☰ Catégorie</span>
     <div class="menu-categories" id="categoriesMenu">
@@ -73,7 +73,7 @@ function toggleMenu() {
             <p class="prix"><?= htmlspecialchars($prod['prix']) ?>€</p>
 
             <!-- Formulaire pour ajouter au panier -->
-           <form method="post" action="ajouter_au_panier.php">
+            <form method="post" action="ajouter_au_panier.php">
                 <!-- On envoie l’ID du produit dans un champ caché -->
                 <input type="hidden" name="Reference" value="<?= $prod['Reference'] ?>">
                 <button type="submit" class="btn-panier" name="ajoutPanier">Ajouter au panier</button>

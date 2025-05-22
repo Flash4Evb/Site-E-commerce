@@ -21,7 +21,7 @@
     header("Location: GestionProduit.php");
     exit();
   } elseif (isset($_POST['btnCmd'])) {
-    header("Location: GestionCommande.html");
+    header("Location: GestionCommande.php");
     exit();
   }
   ?>

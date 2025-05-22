@@ -58,8 +58,8 @@ if (isset($_POST['afficher_prod'])) {
            <td><?= htmlspecialchars($produits['image']) ?></td>
             <td>
        <div>
-            <a href="FormulaireProduit.php?id=<?= $produits['Reference'] ?>" class="btn">✏️ Modifier</a> <!-- 1_URL avec paramètre 2_raccourci -->
-           <a href="Suppression_Produit.php?id=<?= $produits['Reference'] ?>" 
+            <a href="FormulaireProduit.php?Reference=<?= $produits['Reference'] ?>" class="btn">✏️ Modifier</a> <!-- 1_URL avec paramètre 2_raccourci -->
+           <a href="Suppression_Produit.php?Reference=<?= $produits['Reference'] ?>" 
              class="btn" 
              onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce client ? Cette action est irréversible.');">
             🗑️ Supprimer
