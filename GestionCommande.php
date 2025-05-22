@@ -41,7 +41,7 @@ try {
                 echo "<div style='border:1px solid #ccc; padding:15px; margin-bottom:20px; background:#f9f9f9;'>";
                 echo "<h3>Commande n°{$commande['idCmd']}</h3>";
                 echo "<p><strong>Date :</strong> {$commande['dateCmd']}</p>";
-                echo "<p><strong>Client :</strong> {$commande['nom_client']} ({$commande['email']})</p>";
+                echo "<p><strong>Client :</strong> {$commande['nom_client']} ({$commande['adresse']})</p>";
                 echo "<p><strong>Mode de paiement :</strong> {$commande['mode_paiement']}</p>";
                 echo "<p><strong>Statut :</strong> {$commande['statut']}</p>";
                 echo "<h4>Produits commandés :</h4>";

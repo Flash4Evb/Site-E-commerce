@@ -59,6 +59,18 @@ $nomClient = $_SESSION['nom'] ?? 'Client';
         .btn:hover {
             background-color: #005f7a;
         }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +86,10 @@ $nomClient = $_SESSION['nom'] ?? 'Client';
         <a href="logout.php" class="btn">🚪 Déconnexion</a>
     </div>
 </div>
-
+<div class="links">
+    <a href="Accueil.php">← Retour à l'accueil</a>
+    <a href="historique_commandes.php">📦 Historique des commandes</a>
+    <a href="logout.php">🔒 Déconnexion</a>
+</div>
 </body>
 </html>
