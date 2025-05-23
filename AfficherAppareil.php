@@ -4,7 +4,7 @@ include("Connexion.php");
 
 try {
     // Requête SQL pour récupérer tous les produits de la catégorie "maquillage"
-    $stmt = $pdo->prepare("SELECT * FROM produit WHERE categorie = 'maquillage'");
+    $stmt = $pdo->prepare("SELECT * FROM produit WHERE categorie = 'appareil'");
     $stmt->execute();
     $produits = $stmt->fetchAll();
 } catch (PDOException $e) {

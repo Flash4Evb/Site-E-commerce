@@ -117,8 +117,8 @@ form{
 }
 
 .parfum img {
-    width: 100%;
-    height: auto;
+   max-width: 100%;
+    max-height: 180px;
     border-radius: 10px;
     object-fit: cover; /* Coupe l’image proprement si besoin */
 }
