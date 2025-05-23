@@ -61,6 +61,7 @@ function toggleMenu() {
         </div>
     </div>
     <!-- BOUCLE pour afficher chaque produit dynamiquement -->
+     <div class="liste-produits"> <!--  conteneur parent -->
     <?php foreach ($produits as $prod): ?>
         <div class="parfum">
             <!-- Image du produit : le nom de l'image est récupéré depuis la base -->
@@ -80,7 +81,7 @@ function toggleMenu() {
             </form>
         </div>
     <?php endforeach; ?>
-
+          </div>
     <footer style="background-color:rgb(41, 46, 52); color: white; padding: 40px 20px; font-family: Arial, sans-serif;">
   <div style="text-align: center; margin-bottom: 30px;">
     <a href="#" style="color: white; text-decoration: none;">Retour en haut</a>

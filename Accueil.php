@@ -64,7 +64,27 @@ $_SESSION['last_activity'] = time();
     }
 </script>
 
-<!-- 🔸 JS pour bannière et carrousel -->
+<!-- 🔸 JS pour bannièreCookie -->
+ <!-- Bannière de cookies -->
+<div id="cookieBanner" class="cookie-banner">
+  <p>Ce site utilise des cookies pour vous garantir la meilleure expérience. <a href="#">En savoir plus</a></p>
+  <button id="acceptCookies">Tout accepter</button>
+</div>
+
+<!-- Script JavaScript -->
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("cookiesAccepted")) {
+      document.getElementById("cookieBanner").style.display = "flex";
+    }
+
+    document.getElementById("acceptCookies").addEventListener("click", function () {
+      localStorage.setItem("cookiesAccepted", "true");
+      document.getElementById("cookieBanner").style.display = "none";
+    });
+  });
+</script>
+
 
 <body>
 
